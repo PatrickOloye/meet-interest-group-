@@ -9,7 +9,7 @@ const mongoSanitize = require('express-mongo-sanitize')
 const xss = require('xss-clean')
 const hpp = require('hpp')
 const compression = require('compression')
-const cord = require('cors')
+const cors = require('cors')
 
 
 dotenv.config()
