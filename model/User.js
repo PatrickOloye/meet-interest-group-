@@ -41,6 +41,8 @@ const userSchema = new mongoose.Schema({
         default: true,
         select: false
     }
+},{
+    timestamps: true
 })
 
 //encrypt the password by using a mongoose middleware(presave middleware)
