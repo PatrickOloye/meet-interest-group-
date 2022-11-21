@@ -50,8 +50,8 @@ app.use(hpp({
 
 
 const port = process.env.PORT || 3000
-app.use('/api/v0/meet', authRouter)
-app.use('/api/v0/meet', userRouter)
+app.use('/api/v1/meet', authRouter)
+app.use('/api/v1/meet', userRouter)
 
 
 mongoose.connect(process.env.MONGO_URI, 

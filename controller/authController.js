@@ -22,6 +22,7 @@ exports.signup = asyncErrors(async (req, res, next) => {
             password: req.body.password,
             confirmPassword: req.body.confirmPassword
         })
+        // const userId = User._id
         // const token = signToken(newUser._id)
         //jwt.sign({ id: newUser._id }, process.env.JWT_SECRET, {
         //     expiresIn: process.env.JWT_EXPIRESIN
@@ -144,7 +145,7 @@ exports.verifyEmail = asyncErrors(async(req, res, next) => {
         html: plainEmailTemp("Email Verified Successfully", "Thanks for connecting with us")
     });
 
-    res.json({success: true, message: "email is successfully verified.", user:{ name:
+    res.status(200).json({success: true, data: {message: "email is successfully verified."}, user:{ name:
     user.name, email: user.email, id: user._id}})
 
 })
