@@ -20,7 +20,7 @@ exports.signup = asyncErrors(async (req, res, next) => {
             name: req.body.name,
             email: req.body.email,
             password: req.body.password,
-            confirmPassword: req.body.confirmPassword
+            // confirmPassword: req.body.confirmPassword
         })
         // const userId = User._id
         // const token = signToken(newUser._id)

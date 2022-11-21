@@ -24,10 +24,10 @@ const userSchema = new mongoose.Schema({
         maxlength: 20,
         select: false
     }, 
-    confirmPassword: {
-        type: String,
-        required: [true, 'please confirm your password']
-    },
+    // confirmPassword: {
+    //     type: String,
+    //     required: [true, 'please confirm your password']
+    // },
     verified: {
         type: Boolean,
         default: false,

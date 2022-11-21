@@ -9,6 +9,7 @@ const mongoSanitize = require('express-mongo-sanitize')
 const xss = require('xss-clean')
 const hpp = require('hpp')
 const compression = require('compression')
+const cord = require('cors')
 
 
 dotenv.config()
@@ -22,6 +23,7 @@ app.use(express.json({ limit: '10kb'}))
 app.use(mongoSanitize());
 
 app.use(compression())
+app.use(cors())
 
 //data sanitization against against xxs
 app.use(xss())
