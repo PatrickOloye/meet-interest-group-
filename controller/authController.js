@@ -90,9 +90,9 @@ exports.login = asyncErrors(async(req, res, next) =>{
         if(!user || !(await user.comparePassword(password, user.password))){
             return next(res.status(401).json('incorrect email or password'))
         }
-        if(user.verified === false){
-            return next(res.status(400).json({msg: 'please verify your email'}))
-        }
+        // if(user.verified === false){
+        //     return next(res.status(400).json({msg: 'please verify your email'}))
+        // }
         
         // console.log(req.body)
         
